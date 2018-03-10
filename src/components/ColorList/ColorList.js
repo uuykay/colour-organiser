@@ -10,7 +10,10 @@ const Color = ({
   <section className="color">
     <h1>{title}</h1>
     <button onClick={onRemove}>X</button>
-    <div className="color" style={{ backgroundColor: color }} />
+    <div
+      className="color"
+      style={{ backgroundColor: color, width: "30px", height: "30px" }}
+    />
     <div>
       <StarRating starsSelected={rating} onRate={onRate} />
     </div>

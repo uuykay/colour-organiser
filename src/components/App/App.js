@@ -48,12 +48,13 @@ class App extends Component {
   }
 
   render() {
-    const { addColor } = this;
+    // Callback functions. They are handle functions
+    const { addColor, rateColor, removeColor } = this;
     const { colors } = this.state;
     return (
       <div className="App">
         <AddColorForm onNewColor={addColor} />
-        <ColorList colors={colors} />
+        <ColorList colors={colors} onRate={rateColor} onRemove={removeColor} />
       </div>
     );
   }
